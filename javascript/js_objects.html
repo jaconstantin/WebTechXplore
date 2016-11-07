@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+	<head>		         
+		<script src="externScript.js"> </script>      <!--include an external java script-->
+		<script>
+			function book(title, author){			  //here, can define any arbitrary function that acts as a constructor
+				this.title = title;                   //further note, the entire web page window is considered an object named document
+				this.author  = author;
+			}
+			
+			function addExpense(additional){       
+				this.price += additional;
+			}
+			
+			function expense(price,description){   //here, say we want to add a method named add, can assign it to a function name addExpense
+				this.price = price;
+				this.description = description;
+				this.add = addExpense;
+			}
+		</script>
+	</head>                                           
+
+	
+	<body>
+		<!--In this example, we explore some tips for using a string and Numbers -->
+		<!--a string has a lot of internal methods that can be utilized -->
+	
+	<div>
+		<h1>Java Script Objects</h1>
+		<p> how to declare objects. </p>  <!--for one, it seems that we can simply declare it and init a value at the same time -->
+		<code> <script>											     
+		var tryObject = {firstName:"John", lastName:"Doe", age:50, eyeColor:"blue"};
+		document.write("tryObject.firstName = "+tryObject.firstName);
+		document.write("<br>");
+		
+		var tryObject2 = new Object();	   //option 2, we can always use new, and Object() is a constructor for any object
+		tryObject2.firstName = "Joseph";   //can add in properties later...
+		document.write("tryObject2.firstName = "+tryObject2.firstName);
+		
+		var tryObject3 = new book("One Piece", "Eichiro Oda");
+		document.write("<br>");
+		document.write("tryObject3.title = "+tryObject3.title);      //Option3, together with new, use a userdefined function that acts like a constructor
+		document.write("<br>");
+		
+		var tryObject4 = new expense(100,"Jollibee");
+		document.write("tryObject4.expense = " +tryObject4.price+"<br>");
+		tryObject4.add(100);
+		document.write("after tryObject4.add(100), expense = "+tryObject4.price);
+		
+		</script> </code>
+		
+		<!--DOM or document object model.... wherein the entire html document/window browser is designed as a DOM -->
+		<!--Note that there are multiple DOM available and might need testing to make applications compatible in all browsers -->
+		
+	</div>
+	
+		
+	
+	</body>
+</html>

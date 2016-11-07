@@ -1,0 +1,37 @@
+*What is a relational database? It is a collection of data that is organized as a set of formally described tables. 
+Data can be accessed and reassembled in many different ways without having to reorganize the actual table. 
+
+-Interfaced using a Structured Query Language.
+-Easy to access, modify and extend
+
+*A table, sometimes called a relation, contain data fitted into predefined categories. Each column is a category, while each row is 
+an instance of that category. Hence, the contents of the table is a related data. 
+
+Eg: on a customer table, the columns are name, age, address. Row 1 says Otep, 28. Reservoir, while Row 2 says Anne, 29, Reservoir.  
+Each data on a column is of the same category, while each row is a group of related data from different categories, referring to one instance of customer.
+
+
+
+	Name	Age	Address
+	Otep	28	Reservoir
+	Anne	28 	Reservoir
+
+On the other hand, a relational database management system is a program that lets you create, update, and administer a relation database
+
+
+Terminologies… need to find out more about those keys!
+
+• Database: A database is a collection of tables, with related data.
+• Table: A table is a matrix with data. A table in a database looks like a simple spreadsheet.
+• Column: One column (data element) contains data of one and the same kind, for example the column postcode.
+• Row: A row (= tuple, entry or record) is a group of related data, for example the data of one subscription.
+• Redundancy: Storing data twice, redundantly to make the system faster.
+• Primary Key: A primary key is unique. A key value can not occur twice in one table. With a key, you can find at most one row.
+• Foreign Key: A foreign key is the linking pin between two tables.
+• Compound Key: A compound key (composite key) is a key that consists of multiple columns, because one column is not sufficiently unique.
+• Index: An index in a database resembles an index at the back of a book.
+• Referential Integrity: Referential Integrity makes sure that a foreign key value always points to an existing row.
+
+From <https://www.tutorialspoint.com/mysql/mysql-introduction.htm>	
+
+

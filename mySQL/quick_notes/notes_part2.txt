@@ -1,0 +1,9 @@
+---*open the MySQL work bench*----
+How to start
+1. Establish a new connection.	
+	->Database -> Manage connection
+2. Download a sample database to the mysql server	
+	-> File -> open mySql script : open the file
+	execute the script to store the new data to the SQL server
+	refresh all schemas to see the new database
+

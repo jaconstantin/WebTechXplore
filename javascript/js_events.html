@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<script>
+		
+			function over(){
+				document.getElementById('mouseH2').style.color = "red"; }
+			
+			function out(){
+				document.getElementById('mouseH2').style.color = "black";}
+				
+		</script>
+	</head>
+	<body>
+		<!--In this example, we are going to try out using js on jav script events -->
+		<!--Example here is	reacting to clicking a button, then using js to change an html element attribute-->
+	<div>
+		<h1>What Can JavaScript Do?</h1>
+		<p id="demo">JavaScript can change HTML content.</p>
+		<button type="button" onclick="document.getElementById('demo').innerHTML = 'Hello JavaScript!'">Click Me!</button>
+	</div>
+		
+		<!-- in the next example, we are changing the attribute, say have a different style color, or display-->
+	<div>
+		<h1 id="head1">Java script changing the attribute of an element</h1>
+		<button type="button" onclick="document.getElementById('head1').style = 'color:red;'  ">Color Red!</button>
+		<button type="button" onclick="document.getElementById('head1').style = 'color:blue;' ">Color Blue!</button>
+		<button type="button" onclick="document.getElementById('head1').style.display = 'none'">Hide Me!</button>
+		<button type="button" onclick="document.getElementById('head1').style.display = 'inline'">Show Me!</button>
+	</div>
+	
+		<!--also have onsubmit event, but let us better discuss that later together with the forms, can be used to check input first before submitting -->
+		
+		<!-- onmouseover and onmouseout-->
+	<div onmouseover="over()" onmouseout="out()">
+		<h2 id="mouseH2">Hover to this division</h2>
+	</div>
+	
+		<!--lots of other events to play with-->
+	
+	</body>
+</html>

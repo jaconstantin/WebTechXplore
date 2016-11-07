@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+	<head>		         
+		<script src="externScript.js"> </script>      <!--include an external java script-->
+		<script>
+			
+		</script>
+	</head>                                           
+
+	
+	<body>
+		<!--In this example, we see that a js program can be executed by the browser -->
+		<!--statements end in a semicolon, and variables can be used -->
+		<!-- +operator can add numbers and concatenate strings-->
+	
+	<div>
+		<h1>What Can JavaScript Do?</h1>
+		<p id="demo">A browser can execute a javascript program</p>
+		<code><script>
+			var x = 5;                                //variables are declared with keyword var
+			var y = 6;								  //quotes denotes a string, numbers are without quotes
+			var z = x + y;                            //alternatvively, can do var x=5, y=6;
+			var a = "Anne";                           //un initialized variables has a value of undefined
+			document.write("var x + var y = "+z+" var a = "+a);	  //adding a number to a string treats the number as a string
+		</script></code>
+		<br />
+		
+		<p> can redeclare a variable to be of different type</p>
+		<code><script>
+			document.write("typeof(x) = "+typeof(x)+" tpyeof(a) = "+typeof(a));         //use typeof to return the data type
+			var x="Otep";                                                               //basic data types are number string, array, object, boolean, and undefined for unitialized variable
+			document.write("<br>");                                                     //although, typeof array will return an object, a null also returns an object
+			document.write(" x was redeclared to be->"+x);  //dynamic variables, can be redeclared to a different type
+		</script></code>
+		<br />
+		
+		<p> arrays are declared within [] brackets, objects within curly braces</p>
+		<code> <script>											     //arrays are declared within [] brackets	
+			var tryArray = ["Anne","Otep","Constantino"];            //objects here looks like a structure, whose field does not need declarations
+			document.write("tryArray[1] = "+tryArray[1]+"<br>");
+			var tryObject = {firstName:"John", lastName:"Doe", age:50, eyeColor:"blue"};
+			document.write("tryObject.firstName = "+tryObject.firstName);
+		</script> </code>
+		
+		<p> to declare a function, use the function keyword </p>
+		<code> <script>
+			function tryFunction(a,b){
+				return a+b;
+			}
+			document.write("tryFunction(1,2) = "+tryFunction(1,2));
+			document.write("<br>");
+			document.write("tryFunction('joseph','constantino') = "+tryFunction("joseph","constantino")); 
+			document.write("<br>");
+			document.write("tryFunction = "+tryFunction);    //using tryFunction will return the entire definition of the function
+		</script> </code>
+		<br />
+		
+		
+		<p> let us focus more on objects that contains both members and methods </p>
+		<code> <script>
+			var person = {               //see here, we did not have a declaration of the person object...
+				firstName: "John",
+				lastName : "Doe",
+				id       : 5566,
+				fullName : function() {
+				   return this.firstName + " " + this.lastName;
+				}
+			}
+			document.write("person.fullName() = "+person.fullName() );
+		</script> </code>
+		
+	</div>
+		
+	
+	</body>
+</html>

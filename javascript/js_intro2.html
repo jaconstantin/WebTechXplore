@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+	<head>		            <!--if not included in element instantiation, all scripts should be enclosed in <script> tag -->
+		<script>            <!--can create java script functions, can place in head, body, or put it in a single page -->
+			function myFunction() {
+				document.getElementById("demo").innerHTML = "Paragraph changed.";
+			}		
+		</script>
+		<script src="externScript.js"> </script>      <!--include an external java script-->
+	</head>                                           <!--cached javascript files can improve loading times -->
+
+	
+	<body>
+		<!--In this example, we use the js function in the onclick field of a button -->
+		<!--also note that in this example, we active a java script upon an HTML event, which is button click-->
+	<div>
+		<h1>What Can JavaScript Do?</h1>
+		<p id="demo">JavaScript can change HTML content.</p>
+		<button type="button" onclick="myFunction()">Click Me!</button>
+	</div>
+		
+		<!-- in the next example, we are changing the attribute, say have a different style color, or display-->
+	<div>
+		<h1 id="head1">Java script changing the attribute of an element</h1>
+		<button type="button" onclick="colorRed()">Color Red!</button>
+		<button type="button" onclick="colorBlue()">Color Blue!</button>
+		<button type="button" onclick="document.getElementById('head1').style.display = 'none'">Hide Me!</button>
+		<button type="button" onclick="document.getElementById('head1').style.display = 'inline'">Show Me!</button>
+	</div>
+	
+	<div>
+		<h1>Demonstrate how js can provide output besides innerHTML</h1>
+		<script>
+		window.alert(5 + 6);   <!--output something through a dialogue window-->
+		document.write(5+6);   <!--output to html doc, but will delete all html contents when page is fully loaded-->
+		console.log(5 + 6);    <!--through the console-->
+		</script>
+	</div>
+	
+	</body>
+</html>

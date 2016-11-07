@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+	<head>		         
+		<script src="externScript.js"> </script>      <!--include an external java script-->
+		<script>
+			
+		</script>
+	</head>                                           
+
+	
+	<body>
+		<!--In this example, we explore some tips for using a string and Numbers -->
+		<!--a string has a lot of internal methods that can be utilized -->
+	
+	<div>
+		<h1>String methods?</h1>
+		<p id="demo">Extracting string characters using the safe way</p>
+		<code><script>
+			var str = "HELLO WORLD";
+			document.write("str.charAt(2) = " + str.charAt(2));	  //adding a number to a string treats the number as a string
+		</script></code>
+		
+		<p>Accessing strings as an array is not safe. Convert it to array first </p>
+		<code> <script>
+			var strArray = str.split("");						  //split the string into individual characters
+			document.write("strArray[2] = "+strArray[2]);
+		</script> </code>	
+	</div>
+	
+	<div>
+		<h1>Number methods</h1>
+		<p> Numbers in js is always double precision, floating point, sometimes in accurate arithmetic </p>
+		<code> <script>
+			var x = 0.1 + 0.2;
+			document.write("0.1 + 0.2 = " + x);
+		</script> </code>
+		
+		<p> it helps to multiply and divide </p>
+		<code><script>
+			var x = ((0.1 * 10) + (0.2 * 10))/10;
+			document.write(x);
+		</script></code>
+		
+		<p> despite being primitives, numbers also have methods, because they are treated as objects </p>
+		<code> <script>
+			var x = 123;
+			document.write("x.toString() = "+x.toString());            // returns 123 from variable x
+			document.write("<br>");
+			document.write("(123).toString() = "+(123).toString());        // returns 123 from literal 123
+			document.write("<br>");
+			document.write("x.toExponential() = " + x.toExponential());
+		</script> </code> 
+		
+	</div>
+	
+		
+	
+	</body>
+</html>
